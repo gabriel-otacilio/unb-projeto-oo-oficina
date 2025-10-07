@@ -1,0 +1,84 @@
+cd faculGabriel\2_semestre\Orientacao_Objeto\EPF\UNB-Python-Projeto
+terminar de fazer os edits de vistoria e pedidos e ver o metodo do pagar
+
+-> 1º) Qual a finalidade de uma ambiente virtual ?
+    -> isolar as dependencas de um projeto;
+    -> desse modo eu posso trabalhar com tudo oque eu quiser no ambiente virtual que não vai mexer na minha 
+        maquina física 
+
+-> 2°) Os metodos especificos de uma entidade onde que eu coloco ? em model ou service ?
+na model mesmo 
+
+-> 3°)Tem como eu testar um model sem a view e o service dela?
+    -> tem, eu instancio a classe model, e a pipipiModel e faço os comandos e, teste.py e no final executo teste.py no terminal.
+    -> mmodel funcionario como modelo.
+
+
+4º) pode usar só um tipo de banco de dados, o mesmo pra salvar os models e o mesmo pro login?
+
+-> 5°) a persistencia do login, como funcionaria? eu criaria uma pasta dentro de data? e se eu usar outro banco ?
+    -> joão Paulo
+
+FEITO 6°) pensar na lógica dos pedidos e vistorias, eles vão ser um objeto?? entao seria uma lista de objetos ??? 
+    -> e ai o pegar seria pegar do json deles e colocar dentro do objeto do fucionario.(deletar e adicionar)
+    
+FEITO 7°) olhar o model problema, carros, vistorias: ele ta exibindo o objeto ao inves do dicionario e quando ta vazio aparece none ao inves da lista vazia
+
+-> service ja deu um jeito nisso FEITO 8°) aplicar duplicidade de id em classes iguais?
+    Sim mas como? randorizador de numeros de até 9 digitos excluindo cada vez que eu usar um
+
+
+-> 9°) problema encontrado ao escrever aquivo json de vistorias, problema ao escrever os atributos que são objetos
+    -> File "E:\faculGabriel\2_semestre\Orientacao_Objeto\EPF\UNB-Python-Projeto\test.py", line 19, in <module>
+    vis_model.add(vistoria1)
+    ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "E:\faculGabriel\2_semestre\Orientacao_Objeto\EPF\UNB-Python-Projeto\models\vistorias.py", line 53, in add
+    self._save()
+    ~~~~~~~~~~^^
+  File "E:\faculGabriel\2_semestre\Orientacao_Objeto\EPF\UNB-Python-Projeto\models\vistorias.py", line 43, in _save
+    json.dump([a.to_dict() for a  in self.vistorias], f, indent=4, ensure_ascii=False)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gabriel\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 179, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "C:\Users\Gabriel\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 430, in _iterencode
+    yield from _iterencode_list(o, _current_indent_level)
+  File "C:\Users\Gabriel\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "C:\Users\Gabriel\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\Gabriel\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+  File "C:\Users\Gabriel\AppData\Local\Programs\Python\Python313\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type Carro is not JSON serializable
+
+    -> o dump nao interpreta objetos eu tenho que trandforma-lo pra um dicionario(to_dict()) antes
+
+ - > 10°) oque o update faz ? 
+        atualiza passando um novo objeto com a alteração desejada.
+
+FEITO 11°) adapatar o parametro problema de carro para uma lista, e adaptar todos os metodo que usam ele. 
+
+FEITO 1/2 12°) um randorizador de numeros pra definir o id da entidade, ate 4 digitos
+  -> parece que tem em cada service
+
+FEITO 13°) depois adaptar todas as listas receberem apenas o id das coisas
+
+FEITO 14°) como atualizar uma vistoria de um cliente depois que eu fecha-la(preciso mesmo?)
+
+FEITO 15°) ver inversao de prazo e progresso em pegar_pedidos
+
+16°) como eu verei a questão de tratamento de erros no projeto
+    -> estourar um problema nas filtragens das listas
+
+
+17°) e a questão de polimorfismo, sobreescrita e sobrecarga??
+
+FEITO 18°) adaptar pra tudo que receba carro receba o chassi dele ao inves do carro
+
+
+19°) ver o loop em cliente listar carros do pq que n ta funcionando -> só ta funcionando quando eu recarrego meu servidor 
+
+20°) ver como passar o id do usuario la de primeira sem precisar colocar

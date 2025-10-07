@@ -1,0 +1,20 @@
+1) mudar os nomes das listas que vao receber id's pra <nomedalista>_id
+        quais devem mudar :
+        ->funcionario de pedidos (check)
+        ->funcioanrios de vistorias (check)
+        ->(os carros em pedido e vistoria deixam do jeito que está)
+        -> as duas listas de funcioanrios (check)
+        -> as tres listas de clientes (check)
+        -> as listas de problemas em carros(check)
+
+
+
+2) fazer com que todas as listas recebam apenas id's:
+        quais recebem coisas diferentes de id's:
+        -> cliente: lista de vistorias e carros (check)
+        -> pedidos : carro (check)
+        -> vistoria : carro(check)
+
+
+
+
